@@ -1,0 +1,18 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC database connection settings for MySQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property> <!-- MySQL dialect -->
+        <property name="hibernate.driver_class">com.mysql.cj.jdbc.Driver</property>        <!-- JDBC Driver for MySQL -->
+        <property name="hibernate.url">jdbc:mysql://localhost:3306/labexam?useSSL=false&amp;serverTimezone=UTC</property> <!-- Correct MySQL URL with SSL disabled and timezone set to UTC -->
+        <property name="hibernate.username">root</property>                                  <!-- MySQL username -->
+        <property name="hibernate.password">Rishi@191612</property>                        <!-- MySQL password -->
+
+        <!-- Hibernate settings -->
+        <property name="hibernate.show_sql">true</property> <!-- Display SQL queries -->
+        <property name="hibernate.hbm2ddl.auto">update</property> <!-- Hibernate will update schema -->
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Mapping the Department class -->
+        <mapping class="com.klef.jfsd.exam.Department"/>
+    </session-factory>
+</hibernate-configuration>
